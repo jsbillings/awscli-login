@@ -1,3 +1,6 @@
+.. image:: https://drone.techservices.illinois.edu/api/badges/techservicesillinois/awscli-login/status.svg
+   :target: https://drone.techservices.illinois.edu/techservicesillinois/awscli-login
+
 The awscli-login plugin allows retrieving temporary Amazon credentials by
 authenticating against a SAML Identity Provider (IdP).
 This application is supported under Linux, MacOS, and the `Windows Subsystem for Linux
