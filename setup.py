@@ -29,7 +29,7 @@ setup(
     description='Plugin for the AWS CLI that retrieves and rotates '
     'credentials using SAML ECP and STS.',
     long_description=long_description,
-    url='https://github.com/techservicesillinois/awscli-login',
+    url='https://github.com/jsbillings/awscli-login',
     author='David D. Riddle',
     author_email='ddriddle@illinois.edu',
     classifiers=[
@@ -68,7 +68,7 @@ setup(
     test_suite="tests",
     project_urls={
         'Bug Reports':
-            'https://github.com/techservicesillinois/awscli-login/issues',
-        'Source': 'https://github.com/techservicesillinois/awscli-login',
+            'https://github.com/jsbillings/awscli-login/issues',
+        'Source': 'https://github.com/jsbillings/awscli-login',
     },
 )
