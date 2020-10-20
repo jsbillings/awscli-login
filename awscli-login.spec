@@ -3,7 +3,7 @@
 %global pypi_name awscli_login
 
 Name:           awscli-login
-Version:        0.1.0a5
+Version:        0.1.0a6
 Release:        1%{?dist}
 Summary:        Allows retrieving temporary AWS credentials via SAML
 License:        MIT
@@ -59,6 +59,9 @@ rm -rf $RPM_BUILD_ROOT/%{python3_sitelib}/tests/
 %{python3_sitelib}/%{pypi_name}-%{version}-py%{python3_version}.egg-info/
 
 %changelog
+* Tue Oct 20 2020 Jonathan Billings <jsbillings@jsbillings.org> 0.1.0a6-1
+- Use upstream master for this release
+
 * Tue Oct 20 2020 Jonathan Billings <jsbillings@jsbillings.org> 0.1.0a5-1
 - new package built with tito
 
