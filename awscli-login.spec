@@ -65,5 +65,5 @@ rm -rf $RPM_BUILD_ROOT/%{python3_sitelib}/tests/
 * Tue Oct 20 2020 Jonathan Billings <jsbillings@jsbillings.org> 0.1.0a5-1
 - new package built with tito
 
-* Tue Oct 20 14:54:44 EDT 2020 Jonathan Billings <jsbillings@jsbillings.org> - 0.1.0a6
+* Tue Oct 20 2020 Jonathan Billings <jsbillings@jsbillings.org>
 - initial packge build
