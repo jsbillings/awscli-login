@@ -7,8 +7,8 @@ Version:        0.1.0a6
 Release:        1%{?dist}
 Summary:        Allows retrieving temporary AWS credentials via SAML
 License:        MIT
-URL:            https://github.com/techservicesillinois/awscli-login/tags
-Source0:        https://github.com/techservicesillinois/awscli-login/archive/%{version}.tar.gz
+URL:            https://github.com/jsbillings/awscli-login/tags
+Source0:        https://github.com/jsbillings/awscli-login/archive/%{version}.tar.gz
 
 BuildArch:      noarch
 
