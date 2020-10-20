@@ -59,5 +59,8 @@ rm -rf $RPM_BUILD_ROOT/%{python3_sitelib}/tests/
 %{python3_sitelib}/%{pypi_name}-%{version}-py%{python3_version}.egg-info/
 
 %changelog
+* Tue Oct 20 2020 Jonathan Billings <jsbillings@jsbillings.org> 0.1.0a5-1
+- new package built with tito
+
 * Tue Oct 20 14:54:44 EDT 2020 Jonathan Billings <jsbillings@jsbillings.org> - 0.1.0a6
 - initial packge build
