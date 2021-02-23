@@ -29,6 +29,7 @@ setup(
     description='Plugin for the AWS CLI that retrieves and rotates '
     'credentials using SAML ECP and STS.',
     long_description=long_description,
+    long_description_content_type='text/x-rst',
     url='https://github.com/jsbillings/awscli-login',
     author='David D. Riddle',
     author_email='ddriddle@illinois.edu',
@@ -46,7 +47,7 @@ setup(
         'Programming Language :: Python :: 3.9',
     ],
     keywords='Amazon AWS SAML login access keys',
-    packages=find_packages('src'),
+    packages=find_packages('src', exclude=['tests.*', 'tests']),
     package_dir={'': 'src'},
     python_requires='>=3.5',
     install_requires=[

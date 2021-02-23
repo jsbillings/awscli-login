@@ -10,7 +10,10 @@ from awscli.customizations.configure.set import ConfigureSetCommand
 from botocore.session import Session
 
 from .const import ERROR_INVALID_PROFILE_ROLE
-from .exceptions import SAML
+from .exceptions import (
+    InvalidSelection,
+    SAML,
+)
 from .typing import Role
 
 awsconfigfile = path.join('.aws', 'credentials')
@@ -69,8 +72,10 @@ def get_selection(role_arns: List[Role], profile_role: str = None) -> Role:
                 i += 1
 
         print("Selection:\a ", end='')
-# TODO need error checking
-        return role_arns[select[int(input())]]
+        try:
+            return role_arns[select[int(input())]]
+        except (ValueError, KeyError):
+            raise InvalidSelection
     elif n == 1:
         return role_arns[0]
     else:
@@ -146,11 +151,14 @@ def file2str(filename: str) -> str:
     return data
 
 
-def nap(expires: datetime, percent: float) -> None:
+def nap(expires: datetime, percent: float, refresh: float = None) -> None:
     """TODO. """
-    tz = timezone.utc
-    ttl = int((expires - datetime.now(tz)).total_seconds())
-    sleep_for = ttl * 0.9
+    if refresh:
+        sleep_for = refresh
+    else:
+        tz = timezone.utc
+        ttl = int((expires - datetime.now(tz)).total_seconds())
+        sleep_for = ttl * percent
 
     logger.info('Going to sleep for %d seconds.' % sleep_for)
     sleep(sleep_for)
